@@ -1,0 +1,38 @@
+GET IMAGE
+
+docker pull image_name:tag		-> 	 version
+docker pull image_name			-> no tag - latest
+
+
+RUN CONTAINER FROM IMAGE
+docker run
+
+-p 		-> port
+-e		-> environment variable
+-d 		-> "detached", run container in backgroud
+
+Example
+docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=r00t -d mysql:5.7
+
+SHOW CONTAINERS
+docker ps 		-> show running containers
+docker ps -a 	-> all (stopped, exited and running)
+docker ps -q	-> show only container_ids
+
+STOP CONTAINER
+docker stop container_id
+
+REMOVE CONTAINER
+docker rm container_id
+
+DOCKER IMAGES IN THE SYSTEM
+docker image ls 
+= 
+docker images
+
+DOCKER IMAGES REMOVE
+docker rmi image_id 		-> rmi = remove image
+=
+docker image rm
+
+
